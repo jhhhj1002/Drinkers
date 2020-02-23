@@ -1,0 +1,10 @@
+server: 
+  port: 8888
+  servlet: 
+    session: 
+      timeout: 6000s       
+    context-path: /drinkers
+  error: 
+    whitelabel: 
+      enabled: false
+    include-stacktrace: always
