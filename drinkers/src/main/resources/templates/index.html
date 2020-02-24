@@ -1,13 +1,65 @@
 <!DOCTYPE html>
 <html lang="kor" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" 
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
-<head>
-<meta charset="UTF-8">
-<title>메인페이지 테스트용</title>
-</head>
-<body>
-테스트3
-<p th:text="테스트"></p>
+  <head>
+    <meta charset="utf-8">
+    <title>main</title>
+    <link rel="stylesheet" href="main1.css">
+  </head>
+  <body>
 
-</body>
+      <!-- 로그인창 -->
+      <div class="in">
+        <div class="centerimg">
+
+        </div>
+        <form class="form" method="get" id="loginform_content">
+          <div class="id">
+            아이디 :
+            <input type="text" name="id" id="my_id" class="myaccount" required ><br/>
+          </div>
+          <div class="password">
+            비밀번호 :
+            <input type="text" name="password" id="my_pass" class="myaccount" required>
+          </div>
+          <input type="button" id="login" name="Submit" value="로그인">
+          <input type="button" name="" value="회원가입" onclick="create()">
+        </form>
+      </div>
+
+
+      <!-- 회원가입창 -->
+    <div class="createaccount" id="createaccount" >
+      <div class="centerimg2">
+
+      </div>
+      <form class="accountform" method="get" id="createaccount_content">
+        <div class="id">
+          아이디 :
+          <input type="text" name="id" id="id" class="account" required >
+          <br/>
+        </div>
+        <div class="checkId">
+          <input type="checkbox" id="checkbox" value="" required  onclick="checkmyId()">
+            아이디 중복 확인
+        </div>
+        <div class="password">
+          비밀번호 :
+          <input type="text" name="password" id="password" class="account" required>
+        </div>
+        <div class="birth">
+          생년월일 :
+          <input type="date" id="mybirth" name="" value="" required>
+        </div>
+        <div class="check">
+          <input type="checkbox" id="checkmybirth" name="" value="" required onclick="checkmyorder()">
+            본인이 19세 이상임을 확인합니다.
+        </div>
+        <input type="button" id="submit"  name="" value="제출">
+      </form>
+    </div>
+
+    <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script type="text/javascript" src="main1.js"></script>
+  </body>
 </html>
