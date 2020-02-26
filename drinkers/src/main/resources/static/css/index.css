@@ -1,0 +1,126 @@
+@charset "UTF-8";
+
+body {
+  background-image: linear-gradient(to right,#E8EBED,#C9CDD2 ,#9EA4AA,#72787F ,#26282B );
+}
+
+.in{
+  border-radius: 8%;
+  width: 23vw;
+  height: 33vw;
+  text-align: center;
+  background-color: white;
+  top: 8vw;
+  margin: auto;
+  padding: 1vw;
+  padding-top: 1.5vw;
+  position: relative;
+  z-index: 1;
+  box-shadow: 10px 10px 5px black;
+}
+
+.createaccount{
+  text-align: center;
+  background-color: white;
+  border-radius: 8%;
+  width: 20vw;
+  height: 27vw;
+  padding: 1vw;
+  border-style: groove;
+  float: right;
+  display: none;
+  top: -25vw;
+  right: 10vw;
+  position: relative;
+  z-index: 2;
+  box-shadow: 10px 10px 5px black;
+}
+
+.centerimg{
+  border: 6px solid black;
+  width: 15vw;
+  height: 15vw;
+  border-radius: 50%;
+  margin-left: 3.5vw;
+  margin-right: 3.5vw;
+  background-image: url("image/businessman.png");
+  background-color: white;
+  background-position: center;
+  background-size: 17vw;
+}
+
+.centerimg2{
+  width: 5vw;
+  height: 5vw;
+  margin-left: 6.5vw;
+  margin-right: 6.5vw;
+  background-image: url("image/resume.png");
+  background-color: white;
+  background-position: center;
+  background-size: 5vw;
+}
+
+.form{
+   margin-top: 2vw;
+}
+
+.accountform{
+  margin-top: 1.5vw;
+}
+
+.id{
+  margin-left: 1vw;
+}
+
+.check{
+   margin-top: 1.5vw;
+}
+
+input[type = date]{
+  width: 10vw;
+  margin-top: 1vw;
+  height: 2vw;
+  border: 0.5px solid black;
+}
+
+.account{
+  width: 10vw;
+  margin-top: 1vw;
+  height: 2vw;
+  border: 0.5px solid black;
+}
+
+.myaccount{
+  width: 15vw;
+  margin-top: 1vw;
+  height: 2vw;
+  border: 0.5px solid black;
+}
+
+input[type = submit]{
+  border-radius: 8%;
+  width: 5vw;
+  height: 3vw;
+  margin-right: 1vw;
+  font-size: 15px;
+  margin-top: 2vw;
+  border: 0.5px solid black;
+}
+
+input[type = button]{
+  border-radius: 8%;
+  width: 5vw;
+  height: 3vw;
+  margin-right: 1vw;
+  font-size: 15px;
+  margin-top: 2vw;
+  border: 0.5px solid black;
+}
+
+input[type = text]{
+  font-size: 15px;
+}
+
+.checkId{
+  margin-top: 0.5vw;
+}
