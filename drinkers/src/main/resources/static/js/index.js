@@ -5,7 +5,7 @@ $("#submit").click(function () {
   var myid = document.getElementById('id').value;
   var mypass = document.getElementById('password').value;
   $.ajax({
-    url : "main1_3.php",
+    url : "index3.php",
     type : 'GET',
     data : {id:myid,pass:mypass},
     dataType: 'text',
@@ -33,7 +33,7 @@ $("#login").click(function () {
   var myid = document.getElementById('my_id').value;
   var mypass = document.getElementById('my_pass').value;
   $.ajax({
-    url : "main1.php",
+    url : "index.php",
     type : 'GET',
     data : {id:myid,pass:mypass},
     dataType: 'text',
@@ -71,7 +71,7 @@ function checkmyId(){
   var formData = new FormData(form);
   var myid = document.getElementById('id').value;
   $.ajax({
-    url : "main1_2.php",
+    url : "index2.php",
     type : 'GET',
     data : {text1: myid},
     dataType: 'text',
