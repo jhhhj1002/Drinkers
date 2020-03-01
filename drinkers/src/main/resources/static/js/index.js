@@ -51,7 +51,7 @@ $("#login").click(function () {
       else{
         sessionStorage.setItem('myObj',document.getElementById('my_id').value);
         var myid = sessionStorage.getItem("myObj");
-        window.location.replace('main2.html');
+        window.location.replace('main.html');
       }
     }, // success
     error : function(xhr, status,data) {
