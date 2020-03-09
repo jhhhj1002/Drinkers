@@ -7,11 +7,17 @@
 <body>
 
 	<script type='text/javascript'>
-	/*<![CDATA[*/
-	var msg = "[[${msg}]]";
-    alert(msg);
-    location.href = '/drinkers/';
-	/*]]>*/
+	
+		/*<![CDATA[*/
+		var msg = "[[${msg}]]";
+		if(msg == ""){
+			location.href = '/drinkers/go_main';
+		}
+		else{
+			alert(msg);
+		    location.href = '/drinkers/';
+		}
+		/*]]>*/
 
 	</script>
 
