@@ -2,34 +2,41 @@
 <html lang="kor" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" 
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
   <head>
-    <meta charset="utf-8">
-    <title>🍺🍺🍺</title>
+  	<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+  	<title>🍺🍺Drinkers🍺🍺</title>
+    <link rel="shortcut icon" type="image/x-icon" th:href="@{image/favicon.ico}"> 
     <link rel="stylesheet" th:href="@{css/index.css}">
   </head>
+  <!-- 아이콘 추후 변경 -->
+  
   <body>
 
-      <!-- 로그인창 -->
-      <div class="in">
-        <div class="centerimg">
+	<div class="login">
+		<div class="centerimg">
+			<img th:src="@{image/businessman.png}"></img>
+		</div>	
+		<div class="form">
+			<form action="" method="post">
+				<div class = "account_info">
+					<label class="label" > 아이디 </label>
+					<input type="text" class="my_account" id="my_account_id" name="id" required>
+				</div>				
+				<div class = "account_info">
+					<label class="label" > 비밀번호 </label>
+					<input type="text" class="my_account" name="passwd" required>
+				</div>			
+				<div class="button">
+					<input type="Submit" value="로그인">
+					<input type="button" value="회원가입" onclick="create()">
+				</div>				
+			</form>
+		</div>
+	</div>
 
-        </div>
-        <form class="form" method="get" id="loginform_content">
-          <div class="id">
-            아이디 :
-            <input type="text" name="id" id="my_id" class="myaccount" required ><br/>
-          </div>
-          <div class="password">
-            비밀번호 :
-            <input type="text" name="password" id="my_pass" class="myaccount" required>
-          </div>
-          <input type="button" id="login" name="Submit" value="로그인">
-          <input type="button" name="" value="회원가입" onclick="create()">
-        </form>
-      </div>
 
 
-      <!-- 회원가입창 -->
-    <div class="createaccount" id="createaccount" >
+<!-- 
+<div class="createaccount" id="createaccount" >
       <div class="centerimg2">
 
       </div>
@@ -57,6 +64,15 @@
         </div>
         <input type="button" id="submit"  name="" value="제출">
       </form>
+    </div>  -->
+    
+    
+    <div class="test">
+    	<form th:action="@{do_regist}" method="post" >
+    		<input type="text" name="id">
+    		<input type="text" name="passwd"> 
+    		<button type="Submit">Submit</button>
+    	</form>
     </div>
 
     <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
