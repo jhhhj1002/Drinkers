@@ -31,6 +31,15 @@ public class userServiceImpl implements userService  {
 		return false;
 	}
 	
+	public boolean selectUserInfo(userVo user) {
+		List<Map<String, Object>> result = userdao.selectUserInfo(user);
+		
+		if(result.size() != 0) {
+			return true;
+		}
+		return false;
+	}
+	
 //	public int selectUserListCnt(HttpServletRequest request, userVo uservo) throws Exception {
 //		return usermapper.selectUserListCnt();
 //	}

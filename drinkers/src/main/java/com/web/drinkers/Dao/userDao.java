@@ -26,5 +26,11 @@ public class userDao {
 		String query = "SELECT * From USER WHERE id = ? ";
 		return jdbcTemplate.queryForList(query,user.getId());
 	}
+	
+	// db 에서 User id 와 passwd 일치여부 확인 
+	public List<Map<String, Object>> selectUserInfo(userVo user) {
+		String query = "SELECT * From USER WHERE id = ? AND passwd = ?";
+		return jdbcTemplate.queryForList(query, user.getId(),user.getPasswd());
+	}
 
 }
