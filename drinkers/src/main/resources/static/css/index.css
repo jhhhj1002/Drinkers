@@ -1,23 +1,77 @@
 @charset "UTF-8";
 
 body {
-  background-image: linear-gradient(to right,#E8EBED,#C9CDD2 ,#9EA4AA,#72787F ,#26282B );
+	background-image: linear-gradient(to right,#E8EBED,#C9CDD2 ,#9EA4AA,#72787F ,#26282B );
 }
 
-.in{
-  border-radius: 8%;
-  width: 23vw;
-  height: 33vw;
-  text-align: center;
-  background-color: white;
-  top: 8vw;
-  margin: auto;
-  padding: 1vw;
-  padding-top: 1.5vw;
-  position: relative;
-  z-index: 1;
-  box-shadow: 10px 10px 5px black;
+.login{
+	overflow: scroll;
+	border-radius: 8%;
+	width: 23vw;
+	height: 53vh;
+	margin: auto; 
+	margin-top : 15vh; 
+	text-align:center;
+	background-color: white;
+	box-shadow: 10px 10px 5px black;
 }
+
+img{
+	width: 9vw; 
+	height: 15vh;
+	border-radius: 50%;
+}
+
+.centerimg{
+ 	border: 0.1rem solid black;
+ 	width: 9vw; 
+	height: 15vh;
+  	border-radius: 50%;
+  	margin : 0 auto;
+	margin-top : 4vh;
+}
+
+.form{
+	margin-top: 4vh;
+	margin-bottom : 3vh;
+}
+
+.account_info{
+	margin-bottom: 3vh;
+}
+
+.my_account{
+	 width: 15vw;
+	 height: 4vh;
+ 	 margin-left : 1vw;
+	 border: 0.5px solid black;
+}
+
+#my_account_id{
+	margin-left : 1.8vw;	
+}
+
+input[type = button],input[type = submit]{
+	border-radius: 10%;
+	width: 5vw;
+	height: 6vh;
+	font-size: 1vw;
+  	border: 0.5px solid black;
+  	margin : 1vh 0.3vw;
+}
+
+label{
+	font-size: 1vw;
+}
+
+
+
+
+
+
+
+
+
 
 .createaccount{
   text-align: center;
@@ -36,18 +90,7 @@ body {
   box-shadow: 10px 10px 5px black;
 }
 
-.centerimg{
-  border: 6px solid black;
-  width: 15vw;
-  height: 15vw;
-  border-radius: 50%;
-  margin-left: 3.5vw;
-  margin-right: 3.5vw;
-  background-image: url("image/businessman.png");
-  background-color: white;
-  background-position: center;
-  background-size: 17vw;
-}
+
 
 .centerimg2{
   width: 5vw;
@@ -60,17 +103,14 @@ body {
   background-size: 5vw;
 }
 
-.form{
+/* .form{
    margin-top: 2vw;
-}
+} */
 
 .accountform{
   margin-top: 1.5vw;
 }
 
-.id{
-  margin-left: 1vw;
-}
 
 .check{
    margin-top: 1.5vw;
@@ -90,36 +130,22 @@ input[type = date]{
   border: 0.5px solid black;
 }
 
-.myaccount{
-  width: 15vw;
-  margin-top: 1vw;
-  height: 2vw;
-  border: 0.5px solid black;
-}
 
-input[type = submit]{
+/* input[type = submit]{
   border-radius: 8%;
   width: 5vw;
   height: 3vw;
   margin-right: 1vw;
-  font-size: 15px;
+  font-size: 1vw;
   margin-top: 2vw;
   border: 0.5px solid black;
 }
 
-input[type = button]{
-  border-radius: 8%;
-  width: 5vw;
-  height: 3vw;
-  margin-right: 1vw;
-  font-size: 15px;
-  margin-top: 2vw;
-  border: 0.5px solid black;
-}
+
 
 input[type = text]{
-  font-size: 15px;
-}
+  font-size: 1vw;
+} */
 
 .checkId{
   margin-top: 0.5vw;
