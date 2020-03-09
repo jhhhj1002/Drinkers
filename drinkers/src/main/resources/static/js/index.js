@@ -1,3 +1,50 @@
+// 회원가입 버튼 누를때 회원가입 창 폼 보이게 함
+function show_form() {
+	if ($("#create_account").css("display") == "none") {
+		jQuery('#create_account').css("display", "block");
+	} else {
+		jQuery('#create_account').css("display", "none");
+	}  
+}
+  
+
+// 회원가입 폼에서 아이디 중복 확인 체크
+function check_Id() {
+	var userId = $("#account_id").val();
+
+	$.ajax({
+		url : "do_check_id",
+		type : 'GET',
+		data : {
+			userId : userId
+		},
+		dataType : "text",
+		success : function(data) {
+			if (data.includes("true")) {
+				alert("이미 사용중인 아이디 입니다.");
+				$("input:checkbox[id='check_id']").prop("checked", false);
+				$("#account_id").val("");
+			} else {
+				alert("사용 가능한 아이디 입니다.");
+			}
+		},
+		error : function(xhr, status, data) {
+			alert(xhr + " : " + status);
+		}
+	});
+
+}
+
+
+
+
+
+
+
+
+
+
+
 // 회원가입 제출 버튼 클릭시 php 를 통해 person.txt에 정보 저장후 폼 입력값초기화후 폼 안보이게
 $("#submit").click(function () {
   var form = $("form")[1];
@@ -33,11 +80,12 @@ $("#login").click(function () {
   var myid = document.getElementById('my_id').value;
   var mypass = document.getElementById('my_pass').value;
   $.ajax({
-    url : "index.php",
+    url : "./php/index.php", // url 내가ㅏ 수정 
     type : 'GET',
     data : {id:myid,pass:mypass},
     dataType: 'text',
     success : function(data) {
+    	 alert(data);
       if(data.includes("패스워드")){
         alert(data);
         document.getElementById('my_id').value="";
@@ -49,6 +97,7 @@ $("#login").click(function () {
         document.getElementById('my_pass').value="";
       }
       else{
+    	 
         sessionStorage.setItem('myObj',document.getElementById('my_id').value);
         var myid = sessionStorage.getItem("myObj");
         window.location.replace('main.html');
@@ -60,36 +109,6 @@ $("#login").click(function () {
   });
 });
 
-// 회원가입 버튼 누를때 회원가입 창 폼 보이게 함
-function create(){
-  document.getElementById('createaccount').style.display="block";
-}
-
-// 회원가입 폼에서 아이디 중복 확인 체크
-function checkmyId(){
-  var form = $("form")[1];
-  var formData = new FormData(form);
-  var myid = document.getElementById('id').value;
-  $.ajax({
-    url : "index2.php",
-    type : 'GET',
-    data : {text1: myid},
-    dataType: 'text',
-    success : function(data) {
-      if(data.includes("사용중인")){
-        alert(data);
-        document.getElementById('checkbox').checked = false;
-        document.getElementById('id').value="";
-      }
-      else{
-        alert(data);
-      }
-    }, // success
-    error : function(xhr, status,data) {
-      alert(xhr + " : " + status);
-    }
-  });
-}
 
 // 회원가입시 생년월일 체크시 실행되는 function 으로 미성년자이면 가입불가하다는 메시지와 함께 체크박스가 초기화 됨
 function checkmyorder(){
