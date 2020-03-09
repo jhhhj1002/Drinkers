@@ -31,7 +31,7 @@ img{
 	margin-top : 4vh;
 }
 
-.form{
+.login_form{
 	margin-top: 4vh;
 	margin-bottom : 3vh;
 }
@@ -60,93 +60,40 @@ input[type = button],input[type = submit]{
   	margin : 1vh 0.3vw;
 }
 
-label{
+.label{
 	font-size: 1vw;
 }
 
-
-
-
-
-
-
-
-
-
-.createaccount{
-  text-align: center;
-  background-color: white;
+.create_account{
   border-radius: 8%;
   width: 20vw;
-  height: 27vw;
-  padding: 1vw;
-  border-style: groove;
+  height: 40vh;
   float: right;
+  margin-top : -45vh;
+  margin-right : 13vw;
+  text-align: center;
   display: none;
-  top: -25vw;
-  right: 10vw;
-  position: relative;
-  z-index: 2;
+  border-style: groove;
+  background-color: white;
   box-shadow: 10px 10px 5px black;
 }
 
-
-
-.centerimg2{
-  width: 5vw;
-  height: 5vw;
-  margin-left: 6.5vw;
-  margin-right: 6.5vw;
-  background-image: url("image/resume.png");
-  background-color: white;
-  background-position: center;
-  background-size: 5vw;
-}
-
-/* .form{
-   margin-top: 2vw;
-} */
-
-.accountform{
-  margin-top: 1.5vw;
-}
-
-
-.check{
-   margin-top: 1.5vw;
-}
-
-input[type = date]{
-  width: 10vw;
-  margin-top: 1vw;
-  height: 2vw;
-  border: 0.5px solid black;
+.create_account_form{
+  margin-top: 2.5vh;
 }
 
 .account{
   width: 10vw;
-  margin-top: 1vw;
-  height: 2vw;
+  height: 4vh;
+  margin-left : 2vw;
   border: 0.5px solid black;
 }
 
-
-/* input[type = submit]{
-  border-radius: 8%;
-  width: 5vw;
-  height: 3vw;
-  margin-right: 1vw;
-  font-size: 1vw;
-  margin-top: 2vw;
-  border: 0.5px solid black;
+#account_id{
+	margin-left : 3vw;
 }
 
-
-
-input[type = text]{
-  font-size: 1vw;
-} */
-
-.checkId{
-  margin-top: 0.5vw;
+.create_account_info{
+	margin-bottom : 2vh;
 }
+
