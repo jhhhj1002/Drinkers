@@ -7,7 +7,6 @@ function show_form() {
 	}  
 }
   
-
 // 회원가입 폼에서 아이디 중복 확인 체크
 function check_Id() {
 	var userId = $("#account_id").val();
@@ -33,6 +32,39 @@ function check_Id() {
 		}
 	});
 
+}
+
+// 회원가입시 생년월일 체크시 실행되는 function 으로 미성년자이면 가입불가하다는 메시지와 함께 체크박스가 초기화 됨
+function check_birth() {
+
+	var mybirth = $("#mybirth").val();
+	var date = mybirth.split("-");
+	var today = new Date();
+	
+	if(mybirth == ""){
+		$("#check_mybirth").prop("checked", false);
+		alert("생년월일을 선택하세요.");
+	}
+	else if ($("#check_mybirth").prop("checked") == true) { // Check event
+		if ((today.getFullYear() - date[0]) <= 19) {
+			if ((today.getFullYear() - date[0]) == 19) {
+				if ((today.getMonth() + 1 - date[1]) <= 0) {
+					if ((today.getMonth() + 1 - date[1]) == 0) {
+						if ((today.getDate() - date[2]) < 0) {
+							$("#check_mybirth").prop("checked", false);
+							alert("미성년자는 가입이 불가합니다.");
+						}
+					} else {
+						$("#check_mybirth").prop("checked", false);
+						alert("미성년자는 가입이 불가합니다.");
+					}
+				}
+			} else {
+				$("#check_mybirth").prop("checked", false);
+				alert("미성년자는 가입이 불가합니다.");
+			}
+		}
+	}
 }
 
 
