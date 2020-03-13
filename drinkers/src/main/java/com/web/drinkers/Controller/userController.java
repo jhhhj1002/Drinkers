@@ -1,5 +1,8 @@
 package com.web.drinkers.Controller;
 
+import java.io.IOException;
+import java.io.PrintWriter;
+import javax.servlet.http.HttpServletResponse;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -47,11 +50,15 @@ public class userController {
 
 	// 회원가입시
 	@RequestMapping(value = "/do_regist", method = RequestMethod.POST)
-	public String doRegist(userVo user) throws Exception { // + 아이디가 중복됨	
+	public void doRegist(userVo user, HttpServletResponse response) throws IOException{ // + 아이디가 중복됨	
 		logger.info("User 정보" + user);
 		
 		userservice.insertUser(user);
-		return "redirect:/";
+		
+		response.setContentType("text/html; charset=UTF-8");	 
+		PrintWriter out = response.getWriter();		 
+		out.println("<script>alert('회원가입이 완료되었습니다.'); location.href='/drinkers/'; </script>");		 
+		out.flush();
 	}
 	
 	// 회원가입시 아이디 중복 확인	
