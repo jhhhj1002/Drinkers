@@ -44,7 +44,7 @@ public class userController {
 		}
 		
 		mv.addObject("msg", message);
-		mv.setViewName("alert_login");
+		mv.setViewName("login/alert_login");
 		return mv;
 	}
 
@@ -80,7 +80,7 @@ public class userController {
 		logger.info("User 정보" + user);
 		
 		ModelAndView mv = new ModelAndView();	
-		mv.setViewName("main");
+		mv.setViewName("menu/main");
 		return mv;
 	}
 	
