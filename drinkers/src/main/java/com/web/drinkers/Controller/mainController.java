@@ -11,7 +11,7 @@ public class mainController {
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public ModelAndView goLogin() {
 		ModelAndView mv = new ModelAndView();
-		mv.setViewName("index");
+		mv.setViewName("login/index");
 		return mv;
 	}
 
