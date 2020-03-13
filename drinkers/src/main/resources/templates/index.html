@@ -33,12 +33,10 @@
 		</div>
 	</div>
 
-
-
 	<!-- 아이디 & js 추후 수정  -->
 	<div class="create_account" id="create_account"> 
 		<div class="create_account_form">
-			<form method="post">
+			<form th:action="@{do_regist}" method="post">
 				<div class="create_account_info">
 					<label class="label" > 아이디 </label>
 					<input type="text" class="account" id="account_id" name="id" required>
@@ -53,7 +51,7 @@
 				</div>
 				<div class="create_account_info">
 					<label class="label" > 생년월일 </label>
-					<input type="date" class="account" id="mybirth" required>
+					<input type="date" class="account" id="mybirth" name="birth" required>
 				</div>
 				<div class="create_account_info">
 					<input type="checkbox" id="check_mybirth" onclick="check_birth();" required> 
@@ -63,15 +61,6 @@
 			</form>		
 		</div>
 	</div>
-
-
-	<div class="test">
-    	<form th:action="@{do_regist}" method="post" >
-    		<input type="text" name="id">
-    		<input type="text" name="passwd"> 
-    		<button type="Submit">Submit</button>
-    	</form>
-    </div>
 
     <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
     <script type="text/javascript" th:src="@{js/index.js}"></script>
