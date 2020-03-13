@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="kor" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" 
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+<meta charset="UTF-8">
+<title>menu bar</title>
+<link rel="stylesheet" th:href="@{css/header.css}">
+</head>
+<body>
+
+  <!-- 메뉴바 -->
+    <!-- 경로설정한것 확인 -->
+    <div class="menubar">
+      <a th:href="@{go_main}">Home</a>
+      <a href="../food_recipe/food_recipe_main.html">Food Recipe</a>
+      <a href="../alcohol_recipe/alcohol_recipe_main.html">Alcohol Recipe</a>
+      <a href="../ranking/vote_main.html">Ranking</a>
+    </div>
+
+</body>
+</html>
