@@ -16,8 +16,8 @@ public class userDao {
 	
 	// db 에 User 정보 insert
 	public int insertUser(userVo user) {
-		String query = "INSERT INTO USER(id,passwd) VALUES(?,?)";
-		return jdbcTemplate.update(query,user.getId(),user.getPasswd());
+		String query = "INSERT INTO USER(id,passwd,birth) VALUES(?,?,?)";
+		return jdbcTemplate.update(query,user.getId(),user.getPasswd(),user.getBirth());
 	}
 	
 	// db 에서 User id 유무 확인
