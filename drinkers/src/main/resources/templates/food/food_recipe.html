@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="kor" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" 
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+  <head>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+    <title>main</title>
+    <link rel="stylesheet" th:href="@{css/food_recipe.css}">
+  </head>
+  <body> 
+  
+  <!-- 페이징 추가 고민중 -->
+  
+  <!-- 메뉴바 -->
+  <th:block th:include="@{common/header}"></th:block>
+
+  <!-- 메인페이지의 content -->
+  <div class="content">
+    <div class="button">
+      <input type="button" value="최신순" id="last">
+      <input type="button" value="추천순" id="recommend">
+      <input type="button" value="upload" id="upload" onclick="upload();">
+    </div>
+    <div id="image">
+
+    </div>
+  </div>
+
+	<!-- 레시피를 업로드하는 upload form -->
+	<div class="recipe_upload" id="recipe_upload">
+		<form class="recipe_upload_content" id="recipe_upload_form" th:action="@{do_food_recipe_regist}" method="post" enctype="multipart/form-data">
+			<div class="recipe_info" id="recipe_name">
+				<label class="label">레시피 명칭</label> 
+				<input type="text" class="recipe_name" name="recipe_name" required>
+			</div>
+			<div class="recipe_info" id="upload_img">
+				<label class="label">image</label> 
+				<input type="file" class="recipe_img" id="selected_img" name="upload_img[]" multiple="multiple" required>
+			</div>
+			<div class="recipe_info" id="vedio">
+				<label class="label">Vedio</label> 
+				<input type="url" class="recipe_vedio" name="upload_vedio" placeholder="YouTube url 입력" required>
+			</div>
+			<div class="recipe_info" id="Textarea">
+				<label class="label">레시피 설명</label> 
+				<textarea form="recipe_upload_form" class="recipe_desc" id="recipe_textarea" name="recipe_ex" required></textarea>
+			</div>
+			<div class="form_but">
+				<input type="button" id="close_modal" value="Close">
+				<input type="Submit" id="upload_modal" value="Upload"> 			
+			</div>
+		</form>
+	</div>
+
+
+
+	<!--     레시피를 업로드하는 upload form
+  <div class="Recipe" id="Recipe">
+    <div class="Recipe_content">
+      <form class="recipe_upload_form" id="recipe_upload_form" action="" method="post" enctype="multipart/form-data">
+        <div id="recipe_name">
+          레시피 명칭 :
+          <input type="text" id="recipename" name="recipe_name" value="" required="required" >
+        </div>
+        <div id="upload_img">
+          image :
+          <input type="file" id="selected_img" name="upload_img[]" value="" multiple="multiple" required="required"  >
+        </div>
+        <div id="vedio">
+          Vedio :
+          <input type="url" id="upload_vedio" name="upload_vedio" value="" required="required"  placeholder="YouTube url 입력">
+        </div>
+        <div id="Textarea">
+          레시피 설명 :
+          <textarea form="recipe_upload_form" id="recipe_textarea" name="recipe_ex" required="required"></textarea>
+        </div>
+        <input type="button" id="upload_modal" name="" value="Upload" onclick="add()">
+        <input type="button" id="close_modal" name="" value="Close" >
+      </form>
+    </div>
+  </div> -->
+  
+  
+  
+
+    <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script type="text/javascript" th:src="@{js/food_recipe.js}"></script>
+  </body>
+</html>
