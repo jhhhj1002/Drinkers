@@ -27,7 +27,7 @@ public class foodController {
 	@ResponseBody
 	@RequestMapping(value = "/do_food_recipe_regist", method = RequestMethod.POST)
 	public boolean doFoodRecipeUpload() throws Exception {
-		logger.info("food recipe 등록");
+		logger.info("Food recipe 등록");
 
 		return false;
 	}
