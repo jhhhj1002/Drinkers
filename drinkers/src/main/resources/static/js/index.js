@@ -3,6 +3,7 @@ function show_form() {
 	if ($("#create_account").css("display") == "none") {
 		jQuery('#create_account').css("display", "block");
 	} else {
+		$("#create_account_form")[0].reset();
 		jQuery('#create_account').css("display", "none");
 	}  
 }
