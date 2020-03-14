@@ -7,18 +7,21 @@
 <body>
 
 	<script type='text/javascript'>
-	
 		/*<![CDATA[*/
 		var msg = "[[${msg}]]";
-		if(msg == ""){
+		var id = "[[${id}]]";
+		
+		if (msg == "") {
+			if (window.sessionStorage) {
+				sessionStorage.clear();
+				sessionStorage.setItem("my_id", id);
+			}
 			location.href = '/drinkers/go_main';
-		}
-		else{
+		} else {
 			alert(msg);
-		    location.href = '/drinkers/';
+			location.href = '/drinkers/';
 		}
 		/*]]>*/
-
 	</script>
 
 </body>
