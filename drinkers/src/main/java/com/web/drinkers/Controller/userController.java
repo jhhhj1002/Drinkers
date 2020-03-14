@@ -43,6 +43,7 @@ public class userController {
 			message = "아이디와 패스워드가 일치하지 않습니다";				
 		}
 		
+		mv.addObject("id", user.getId());
 		mv.addObject("msg", message);
 		mv.setViewName("login/alert_login");
 		return mv;
@@ -76,11 +77,11 @@ public class userController {
 	
 	// 로그인 성공시 메인페이지 이동
 	@RequestMapping("/go_main")
-	public ModelAndView goMain(userVo user) throws Exception {
-		logger.info("User 정보" + user);
+	public ModelAndView goMain() throws Exception {
+		logger.info("메인페이지 이동");
 		
 		ModelAndView mv = new ModelAndView();	
-		mv.setViewName("menu/main");
+		mv.setViewName("home/main");
 		return mv;
 	}
 	
