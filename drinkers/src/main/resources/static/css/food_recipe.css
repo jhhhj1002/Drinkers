@@ -1,0 +1,129 @@
+@charset "UTF-8";
+
+div.content{
+  margin-top: inherit;
+  border-style: dashed;
+  position: relative;
+  z-index: 1;
+}
+
+div.button input{
+  border: 1px solid black;
+  padding: 8px;
+  font-size: medium;
+  margin: 2vw;
+  border-radius: 10px;
+}
+
+div.button input:hover{
+  color: white;
+  background-color: #333;
+}
+
+div.button #upload{
+  float: right;
+}
+
+div.button #recommend{
+  margin-left: -1vw;
+}
+
+#image{
+  column-width:24vw;
+  column-gap: 1vw;
+}
+#image figure{
+  display: inline-block;
+  border:1px solid rgba(0,0,0,0.2);
+  margin:0;
+  margin-bottom: 15px;
+  padding:10px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.5);;
+}
+#image figure img{
+  width:100%;
+}
+#image figure figcaption{
+  border-top:1px solid rgba(0,0,0,0.2);
+  padding:10px;
+  margin-top:11px;
+}
+
+
+
+
+/*  아래부분만 완성  */
+
+
+.recipe_upload{
+  border-radius: 10%;
+  border:4px solid rgba(0,0,0,0.2);
+  width: 22vw;
+  height: 50vh;
+  background-color: white;
+  margin-left: 65vw;
+  top : 12vh;
+  padding: 2vh;
+  position: fixed;
+  z-index: 2;
+  display: none;
+}
+
+.recipe_upload_content{
+  margin-top: 2vh;
+}
+
+.recipe_info{
+	margin-left: 1vw;
+	margin-bottom : 3vh;
+}
+
+.label{
+	font-size: 1vw;
+	margin-right : 1vw;	
+}
+
+.recipe_name{
+  width: 13vw;
+  height: 3vh;
+  border: 0.5px solid rgba(0,0,0,0.2);
+}
+
+.recipe_vedio{
+ width: 16vw;
+ height: 3vh;
+ border: 0.5px solid rgba(0,0,0,0.2);
+ text-align: center;
+}
+
+.recipe_desc{
+  width: 20vw;
+  height: 18vh;
+  border: 0.5px solid rgba(0,0,0,0.2);
+  margin-top : 1vh;
+}
+
+.form_but{
+	text-align : center;
+}
+
+div.form_but input{
+  padding: 0.5vh;
+  font-size: 1vw;
+  margin-right: 1vh;
+  border-radius: 10%;
+}
+
+
+
+
+
+
+/* input[type = submit]{
+  border: 1px solid rgba(0,0,0,0.2);
+  font-size: medium;
+  border-radius: 10px;
+  padding: 10px;
+  margin-left: 7.5vw;
+}
+ */
