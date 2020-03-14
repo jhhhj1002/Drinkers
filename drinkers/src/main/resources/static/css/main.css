@@ -1,0 +1,44 @@
+@charset "UTF-8";
+
+body {
+	background-color: #26292B;
+}
+
+.userimg {
+	text-align: center;
+	margin-top: 2vh;
+	margin-bottom: 2vh;
+}
+
+.userimg_content {
+	width: 12vw;
+	height: 22vh;
+	border-radius: 50%;
+	display: inline-block;
+	background-image: url("../image/businessman.png");
+	background-repeat: no-repeat;
+	background-color: white;
+	background-position: top;
+	background-position: center;
+	background-size: cover;
+	margin: 0 auto;
+	border: 6px solid #fff;
+}
+
+.my_id {
+	color: white;
+	text-align: center;
+	margin-bottom: 2vh;
+}
+
+.mainimage {
+	margin-top: 2vh;
+}
+
+.mainimage_content {
+	margin: 0 auto;
+	width: 96vw;
+	height: 57vh;
+	background-position: center;
+	background-image: url("../image/painting.jpg");
+}
