@@ -4,19 +4,19 @@
   <head>
     <meta charset="utf-8">
     <title></title>
-    <link rel="stylesheet" href="main2.css">
+    <link rel="stylesheet" th:href="@{css/main.css}">
   </head>
   <body>
     <!-- 실제 메인페이지 -->
 
     <!-- 사용자 이미지 -->
-    <div class="userimagepa">
-      <div class="userimage">
+    <div class="userimg">
+      <div class="userimg_content">
       </div>
     </div>
 
     <!-- 사용자 아이디 -->
-    <div class="id" id="id">
+    <div class="my_id">
     </div>
 
     <!-- 메뉴바 -->
@@ -24,10 +24,15 @@
 
     <!-- 대표이미지 -->
     <div class="mainimage">
-
-    </div>
-    <script type="text/javascript" src="main2.js">
-
+    	<div class="mainimage_content">
+    	</div>
+	</div>
+	
+    
+    <script>
+	    var my_id = sessionStorage.getItem("my_id");
+	    $(".my_id").text(my_id);
     </script>
+    
   </body>
 </html>
