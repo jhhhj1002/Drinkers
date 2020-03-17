@@ -30,19 +30,19 @@
 		<form class="recipe_upload_content" id="recipe_upload_form" th:action="@{do_food_recipe_regist}" method="post" enctype="multipart/form-data">
 			<div class="recipe_info" id="recipe_name">
 				<label class="label">레시피 명칭</label> 
-				<input type="text" class="recipe_name" name="recipe_name" required>
+				<input type="text" class="recipe_name" name="title" required>
 			</div>
 			<div class="recipe_info" id="upload_img">
 				<label class="label">image</label> 
-				<input type="file" class="recipe_img" id="selected_img" name="upload_img[]" multiple="multiple" required>
+				<input type="file" class="recipe_img" id="selected_img" name="imges" multiple="multiple" required>
 			</div>
 			<div class="recipe_info" id="vedio">
 				<label class="label">Vedio</label> 
-				<input type="url" class="recipe_vedio" name="upload_vedio" placeholder="YouTube url 입력" required>
+				<input type="url" class="recipe_vedio" name="url" placeholder="YouTube url 입력" required>
 			</div>
 			<div class="recipe_info" id="Textarea">
 				<label class="label">레시피 설명</label> 
-				<textarea form="recipe_upload_form" class="recipe_desc" id="recipe_textarea" name="recipe_ex" required></textarea>
+				<textarea form="recipe_upload_form" class="recipe_desc" id="recipe_textarea" name="desc" required></textarea>
 			</div>
 			<div class="form_but">
 				<input type="button" id="close_modal" value="Close">
