@@ -4,6 +4,11 @@ spring:
     url: jdbc:mysql://localhost:3306/Drinkers?autoReconnect=true&useSSL=false&serverTimezone=UTC
     username: root
     password: Jh742511
+   servlet:
+    multipart:
+      file-size-threshold: 1MB
+      max-file-size: 100MB
+      max-request-size: 100MB
     
 server: 
   port: 8888
