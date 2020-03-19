@@ -81,7 +81,6 @@ public class foodController {
 //		foodrecipe.getImges().get(0).transferTo(dest);
 	
 		foodrecipe.getImges().get(0).transferTo(dest); 
-		
 	
 		
 
