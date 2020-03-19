@@ -35,7 +35,7 @@ public class foodController {
 		logger.info("Food recipe 이미지 파일명" + foodrecipe.getImges().get(0));
 		logger.info("Food recipe 제목" + foodrecipe.getTitle());
 
-	 	
+		//service 추가
         
 		String recipeTitle = foodrecipe.getTitle();
 		String originalfileName = foodrecipe.getImges().get(0).getOriginalFilename();
