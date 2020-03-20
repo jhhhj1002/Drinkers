@@ -3,6 +3,8 @@ package com.web.drinkers.Controller;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,7 +30,7 @@ public class userController {
 	
 	// 로그인시
 	@RequestMapping(value = "/do_login", method = RequestMethod.POST)
-	public ModelAndView doLogin(userVo user) throws Exception {
+	public ModelAndView doLogin(userVo user, HttpSession sessionStorage) throws Exception {
 		logger.info("User 정보" + user);		
 		
 		String message="";
@@ -41,6 +43,10 @@ public class userController {
 		}
 		else if(is_member_info == false){ 
 			message = "아이디와 패스워드가 일치하지 않습니다";				
+		}
+		else {
+			sessionStorage.removeAttribute("my_id");
+			sessionStorage.setAttribute("my_id", user.getId());
 		}
 		
 		mv.addObject("id", user.getId());
@@ -77,10 +83,13 @@ public class userController {
 	
 	// 로그인 성공시 메인페이지 이동
 	@RequestMapping("/go_main")
-	public ModelAndView goMain() throws Exception {
+	public ModelAndView goMain(HttpSession sessionStorage) throws Exception {
 		logger.info("메인페이지 이동");
 		
+		String my_id = (String) sessionStorage.getAttribute("my_id");
+		
 		ModelAndView mv = new ModelAndView();	
+		mv.addObject("my_id", my_id);
 		mv.setViewName("home/main");
 		return mv;
 	}
