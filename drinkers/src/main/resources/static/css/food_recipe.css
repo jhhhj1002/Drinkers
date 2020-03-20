@@ -89,14 +89,14 @@ div.button #recommend{
   border: 0.5px solid rgba(0,0,0,0.2);
 }
 
-.recipe_vedio{
+.recipe_video{
  width: 16vw;
  height: 3vh;
  border: 0.5px solid rgba(0,0,0,0.2);
  text-align: center;
 }
 
-.recipe_desc{
+.recipe_exp{
   width: 20vw;
   height: 18vh;
   border: 0.5px solid rgba(0,0,0,0.2);
