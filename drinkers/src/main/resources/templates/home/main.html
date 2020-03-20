@@ -16,7 +16,7 @@
     </div>
 
     <!-- 사용자 아이디 -->
-    <div class="my_id">
+    <div class="my_id" th:text="${my_id}">
     </div>
 
     <!-- 메뉴바 -->
@@ -27,12 +27,6 @@
     	<div class="mainimage_content">
     	</div>
 	</div>
-	
-    
-    <script>
-	    var my_id = sessionStorage.getItem("my_id");
-	    $(".my_id").text(my_id);
-    </script>
     
   </body>
 </html>
