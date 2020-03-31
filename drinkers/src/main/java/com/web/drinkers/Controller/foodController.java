@@ -3,6 +3,7 @@ package com.web.drinkers.Controller;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 import javax.servlet.http.HttpSession;
 
@@ -35,8 +36,11 @@ public class foodController {
 	@RequestMapping(value = "/go_food_recipe", method = RequestMethod.GET)
 	public ModelAndView goLogin() {
 		logger.info("Food Recipe 페이지 이동");
-
+		
+		List<Map<String, Object>> foodrecipeList = foodservice.selectAllFoodRecipeInfo();
+		
 		ModelAndView mv = new ModelAndView();
+		mv.addObject("foodrecipeList", foodrecipeList);
 		mv.setViewName("food/food_recipe");
 		return mv;
 	}
@@ -57,6 +61,7 @@ public class foodController {
 		String path = "/Users/ijihyeon/git/Drinkers/drinkers/src/main/resources/static/uploads/";
 		
 		food.setId(id);
+		food.setImg(file[0].getOriginalFilename()); 
 		
 		for(MultipartFile f : file) {
 			fileVo temp = new fileVo();
@@ -70,7 +75,7 @@ public class foodController {
 			File dest = new File(my_path);
 			f.transferTo(dest);
 		}
-
+		
 		//service 에 전송
 		foodservice.insertfoodrecipe(food, files);	
 		
