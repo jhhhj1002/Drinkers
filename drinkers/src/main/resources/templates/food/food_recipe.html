@@ -20,8 +20,11 @@
       <input type="button" value="추천순" id="recommend">
       <input type="button" value="upload" id="upload" onclick="upload();">
     </div>
-    <div id="image">
-
+    <div id="image" th:each="List : ${foodrecipeList}">
+    	<figure th:id="${List.title}" >
+    		<img th:src="${'uploads/'+List.title+'|'+List.img}">
+    		<figcaption th:text="${List.title}"></figcaption>
+    	</figure>
     </div>
   </div>
 
