@@ -9,5 +9,6 @@ public class foodVo {
 	private String id;
 	private String url;
 	private String exp;
+	private String img;
 	
 }
