@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-div.content{
+.content{
   margin-top: inherit;
   border-style: dashed;
   position: relative;
@@ -32,7 +32,8 @@ div.button #recommend{
   column-width:24vw;
   column-gap: 1vw;
 }
-#image figure{
+
+figure{
   display: inline-block;
   border:1px solid rgba(0,0,0,0.2);
   margin:0;
@@ -40,13 +41,14 @@ div.button #recommend{
   padding:10px;
   box-shadow: 2px 2px 5px rgba(0,0,0,0.5);;
 }
-#image figure img{
+figure img{
   width:100%;
 }
-#image figure figcaption{
+figure figcaption{
   border-top:1px solid rgba(0,0,0,0.2);
   padding:10px;
   margin-top:11px;
+  text-align: center;
 }
 
 
