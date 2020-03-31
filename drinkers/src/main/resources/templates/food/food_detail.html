@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="kor" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" 
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="food_detail.css">
+  </head>
+  <body>
+    <!-- 레시피 대표사진 클릭시 레시피에대한 사진 동영상과 detail 보여주는 html -->
+
+    <!-- 메뉴바 -->
+    <div class="menubar">
+      <a href="../main/main2.html">Home</a>
+      <a href="food_recipe_main.html">Food Recipe</a>
+      <a href="../alcohol_recipe/alcohol_recipe_main.html">Alcohol Recipe</a>
+      <a href="../ranking/vote_main.html">Ranking</a>
+    </div>
+
+    <!-- 레시피 불러오는 detail content -->
+    <div class="myrecipe">
+      <div class="recipename" id="recipename">
+        <!-- 레시피 명칭 -->
+      </div>
+      <strong id="reco_count">현재 추천수 : </strong><br/>
+      <div class="recommand" id="recommand" onclick="recommandadd()">
+      </div><br/>
+      <strong id="reco_message">마음에 드신다면 추천버튼 꾹! </strong>
+      <div class="img" id="img">
+      </div>
+      <div class="YouTube" id="YouTubediv">
+
+      </div>
+      <div class="explain">
+        <textarea name="content" id="textarea" rows="8" cols="50">
+        </textarea>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="food_detail.js"></script>
+  </body>
+</html>
