@@ -1,6 +1,7 @@
 package com.web.drinkers.Service;
 
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -26,6 +27,12 @@ public class foodServiceImpl implements foodService{
 		for(fileVo file : fileList) {
 			filedao.insertFile(file);
 		}
+	}
+	
+	@Override
+	public List<Map<String, Object>> selectAllFoodRecipeInfo(){
+		
+		return fooddao.selectAllFoodRecipeInfo(); 
 	}
 
 }
