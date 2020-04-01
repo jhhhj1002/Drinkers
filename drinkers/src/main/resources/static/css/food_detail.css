@@ -1,0 +1,91 @@
+@charset "UTF-8";
+
+div.menubar {
+  background-color: #333;
+  overflow: auto;
+  white-space: nowrap;
+  text-align: center;
+}
+
+div.menubar a {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+}
+
+div.menubar a:hover {
+  background-color: #777 ;
+}
+
+.recommand{
+  width: 4vw;
+  height: 4vw;
+  border-radius: 50%;
+  background-image: url("image/like.jpg");
+  background-color: white;
+  background-position: top;
+  background-size: 3.5vw;
+  border: 3px solid  black;
+  box-shadow: 0 0 20px rgb(221,221,221);
+  float: right;
+  margin-top: -3vw;
+  margin-right: 2vw;
+}
+
+.myrecipe{
+  background-color: white;
+  margin-top: 1vw;
+  padding: 1vw;
+}
+
+.recipename{
+  font-style: oblique;
+  font-size: 2vw;
+  margin-left: 45%;
+  margin-right: 45%;
+  margin-top: 1.5vw;
+}
+
+.img1{
+  width: 15vw;
+  height: 18vw;
+  border: 1px solid black;
+}
+
+.img{
+  margin-left: 3vw;
+  margin-top: 3vw;
+}
+
+#YouTube{
+  margin-left: 5vw;
+  margin-top: 2vw;
+  width: 46vw;
+  height: 25vw;
+  border: 1px solid black;
+  margin-bottom: 2vw;
+}
+
+#textarea{
+  width: 30vw;
+  float: right;
+  height: 35vw;
+  background-color: white;
+  margin-top: -45vw;
+  margin-right: 5vw;
+  border: 3px double black;
+  font-size: 20px;
+  padding: 2vw;
+}
+
+#reco_message{
+  float: right;
+  margin-right: 1vw;
+}
+
+#reco_count{
+  float: right;
+  margin-right: 11vw;
+}
