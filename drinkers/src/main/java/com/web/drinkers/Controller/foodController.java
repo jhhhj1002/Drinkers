@@ -83,8 +83,8 @@ public class foodController {
 		return "redirect:/go_food_recipe";
 	}
 	
-	@RequestMapping(value = "/go_recipe_detail", method = RequestMethod.GET)
-	public ModelAndView goRecipeDetail() {
+	@RequestMapping(value = "/go_food_recipe_detail", method = RequestMethod.GET)
+	public ModelAndView goFoodRecipeDetail() {
 		logger.info("Food Recipe 페이지 이동");
 		
 		
