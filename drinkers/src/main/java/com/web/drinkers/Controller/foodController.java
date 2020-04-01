@@ -34,7 +34,7 @@ public class foodController {
 	
 	
 	@RequestMapping(value = "/go_food_recipe", method = RequestMethod.GET)
-	public ModelAndView goLogin() {
+	public ModelAndView goFoodRecipe() {
 		logger.info("Food Recipe 페이지 이동");
 		
 		List<Map<String, Object>> foodrecipeList = foodservice.selectAllFoodRecipeInfo();
@@ -81,5 +81,16 @@ public class foodController {
 		
 		// ResponseBody 쓸 시 리턴값 재설정
 		return "redirect:/go_food_recipe";
+	}
+	
+	@RequestMapping(value = "/go_recipe_detail", method = RequestMethod.GET)
+	public ModelAndView goRecipeDetail() {
+		logger.info("Food Recipe 페이지 이동");
+		
+		
+		ModelAndView mv = new ModelAndView();
+
+		mv.setViewName("food/food_detail");
+		return mv;
 	}
 }
