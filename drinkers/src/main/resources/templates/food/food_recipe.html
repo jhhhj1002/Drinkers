@@ -22,7 +22,9 @@
     </div>
     <div id="image" th:each="List : ${foodrecipeList}">
     	<figure th:id="${List.title}" >
-    		<img th:src="${'uploads/'+List.title+'|'+List.img}">
+    		<a th:href="@{go_food_recipe_detail(title=${List.title})}">
+    			<img th:src="${'uploads/'+List.title+'|'+List.img}">
+    		</a> 
     		<figcaption th:text="${List.title}"></figcaption>
     	</figure>
     </div>
