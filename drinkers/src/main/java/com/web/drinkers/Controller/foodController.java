@@ -84,9 +84,10 @@ public class foodController {
 	}
 	
 	@RequestMapping(value = "/go_food_recipe_detail", method = RequestMethod.GET)
-	public ModelAndView goFoodRecipeDetail() {
+	public ModelAndView goFoodRecipeDetail(@RequestParam("title") String recipe_title) {
 		logger.info("Food Recipe 페이지 이동");
 		
+		logger.info("Food Recipe Title" + recipe_title);
 		
 		ModelAndView mv = new ModelAndView();
 
