@@ -20,6 +20,7 @@ import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.web.drinkers.Dao.foodDao;
 import com.web.drinkers.Service.foodService;
 import com.web.drinkers.Service.userService;
 import com.web.drinkers.Vo.fileVo;
@@ -86,11 +87,13 @@ public class foodController {
 	@RequestMapping(value = "/go_food_recipe_detail", method = RequestMethod.GET)
 	public ModelAndView goFoodRecipeDetail(@RequestParam("title") String recipe_title) {
 		logger.info("Food Recipe 페이지 이동");
-		
 		logger.info("Food Recipe Title" + recipe_title);
 		
+		Map<String, Object> recipe_info = foodservice.selectFoodRecipeInfo(recipe_title).get(0);
+		// 이미지도 가져와야함
+		
 		ModelAndView mv = new ModelAndView();
-
+		mv.addObject("recipe_info", recipe_info);
 		mv.setViewName("food/food_detail");
 		return mv;
 	}
