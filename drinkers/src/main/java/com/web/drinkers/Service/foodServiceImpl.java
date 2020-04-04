@@ -34,5 +34,12 @@ public class foodServiceImpl implements foodService{
 		
 		return fooddao.selectAllFoodRecipeInfo(); 
 	}
+	
+	@Override
+	public List<Map<String, Object>> selectFoodRecipeInfo(String title){
+		
+		return fooddao.selectFoodRecipeInfo(title);
+		
+	}
 
 }
