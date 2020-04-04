@@ -8,6 +8,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
 import com.web.drinkers.Vo.foodVo;
+import com.web.drinkers.Vo.userVo;
 
 @Repository
 public class foodDao {
@@ -25,5 +26,11 @@ public class foodDao {
 		String query = "SELECT * From FoodRecipe";
 		return jdbcTemplate.queryForList(query);
 	}
+	
+	public List<Map<String, Object>> selectFoodRecipeInfo(String title) {
+		String query = "SELECT * From FoodRecipe WHERE title = ?";
+		return jdbcTemplate.queryForList(query, title);
+	}
+	
 
 }
