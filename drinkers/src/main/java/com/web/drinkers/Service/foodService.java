@@ -14,6 +14,8 @@ public interface foodService {
 	public void insertfoodrecipe(foodVo food,List<fileVo> fileList);// db에 food,file 정보 insert
 	
 	public List<Map<String, Object>> selectAllFoodRecipeInfo();
+	
+	public List<Map<String, Object>> selectFoodRecipeInfo(String title);
 	// 이미지 리스트 insert
 	// 이미지 리스트 return 
 
