@@ -15,7 +15,7 @@
 
     <!-- 레시피 불러오는 detail content -->
     <div class="myrecipe">
-      <div class="recipename" id="recipename">
+      <div class="recipename" id="recipename" th:text="${recipe_info.title}">
         <!-- 레시피 명칭 -->
       </div>
       <strong id="reco_count">현재 추천수 : </strong><br/>
