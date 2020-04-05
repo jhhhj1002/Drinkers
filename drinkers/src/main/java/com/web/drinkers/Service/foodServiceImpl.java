@@ -1,5 +1,6 @@
 package com.web.drinkers.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -38,7 +39,11 @@ public class foodServiceImpl implements foodService{
 	@Override
 	public List<Map<String, Object>> selectFoodRecipeInfo(String title){
 		
-		return fooddao.selectFoodRecipeInfo(title);
+		List<Map<String, Object>> Info = new ArrayList<Map<String, Object>>();
+		Info.add( fooddao.selectFoodRecipeInfo(title));
+		Info.addAll(filedao.selectFoodRecipeImgs(title));	
+		
+		return Info;
 		
 	}
 
