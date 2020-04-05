@@ -27,9 +27,9 @@ public class foodDao {
 		return jdbcTemplate.queryForList(query);
 	}
 	
-	public List<Map<String, Object>> selectFoodRecipeInfo(String title) {
+	public Map<String, Object> selectFoodRecipeInfo(String title) {
 		String query = "SELECT * From FoodRecipe WHERE title = ?";
-		return jdbcTemplate.queryForList(query, title);
+		return jdbcTemplate.queryForMap(query, title);
 	}
 	
 
