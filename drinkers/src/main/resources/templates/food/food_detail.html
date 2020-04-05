@@ -22,7 +22,8 @@
       <div class="recommand" id="recommand" onclick="recommandadd()">
       </div><br/>
       <strong id="reco_message">마음에 드신다면 추천버튼 꾹! </strong>
-      <div class="img" id="img">
+      <div class="img" id="img" th:each="Imgs : ${recipe_imgs}">
+      	<img class = "img1" th:src="@{'uploads/'+ ${recipe_info.title}+'|'+${Imgs.name}}">
       </div>
       <div class="YouTube" id="YouTubediv">
 
@@ -33,6 +34,6 @@
       </div>
     </div>
 
-    <script type="text/javascript" src="food_detail.js"></script>
+    <script type="text/javascript" th:src="@{js/food_detail.js}"></script>
   </body>
 </html>
