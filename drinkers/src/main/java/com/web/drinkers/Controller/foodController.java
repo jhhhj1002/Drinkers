@@ -89,11 +89,13 @@ public class foodController {
 		logger.info("Food Recipe 페이지 이동");
 		logger.info("Food Recipe Title" + recipe_title);
 		
-		Map<String, Object> recipe_info = foodservice.selectFoodRecipeInfo(recipe_title).get(0);
-		// 이미지도 가져와야함
+		List <Map<String, Object>> recipe = foodservice.selectFoodRecipeInfo(recipe_title);
+		Map<String, Object> recipe_info = recipe.get(0);
+		List <Map<String, Object>> recipe_imgs = recipe.subList(1, recipe.size());
 		
 		ModelAndView mv = new ModelAndView();
 		mv.addObject("recipe_info", recipe_info);
+		mv.addObject("recipe_imgs", recipe_imgs);
 		mv.setViewName("food/food_detail");
 		return mv;
 	}
