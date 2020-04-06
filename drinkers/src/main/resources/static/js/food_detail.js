@@ -1,17 +1,16 @@
-// 일단 주석 처리 해놓음 -> 다시 구현
+// innerHTML 다 바꾸기
 
-//// 페이지 로드시 마다 업로드했던 정보 동적으로 가져와서 출력
-//window.onload=function(){
-//  var recipedetail_name = sessionStorage.getItem('recipedetail_name');
-//  document.getElementById('recipename').innerHTML = recipedetail_name;
-//  readTextFile1("recipenames.txt");
-//  var myurl= recipedetail_name+"/"+recipedetail_name+".txt";
-//  readTextFile2(myurl);
-//  if (! localStorage[recipedetail_name]) {
-//    localStorage[recipedetail_name]=0;
-//  }
-//  document.getElementById("reco_count").innerHTML = "현재추천수 : " + localStorage[recipedetail_name];
-//}
+
+// 페이지 로드시 마다 업로드했던 정보 동적으로 가져와서 출력
+window.onload=function(){
+   var recipedetail_name = $('#recipename').text();
+   if (! localStorage[recipedetail_name]) {
+	   localStorage[recipedetail_name]=0;
+   }
+   $('#reco_num').text(localStorage[recipedetail_name]);
+}
+
+
 
 // 업로드했던 레시피의 정보 중 사진을 가지고 와서 화면에 출력
 // recipenames.txt을 통해서 레시피 명과 파일 명을 가지고오고 레시피명으로 된 폴더를 지정해서 사진을 불러올 수 있음
