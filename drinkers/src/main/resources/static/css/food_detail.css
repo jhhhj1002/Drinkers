@@ -49,6 +49,7 @@ div.menubar a:hover {
 }
 
 .img1{
+	margin : 1vw;
   width: 15vw;
   height: 18vw;
   border: 1px solid black;
