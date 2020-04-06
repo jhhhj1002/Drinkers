@@ -22,14 +22,14 @@
       <div class="recommand" id="recommand" onclick="recommandadd()">
       </div><br/>
       <strong id="reco_message">마음에 드신다면 추천버튼 꾹! </strong>
-      <div class="img" id="img" th:each="Imgs : ${recipe_imgs}">
-      	<img class = "img1" th:src="@{'uploads/'+ ${recipe_info.title}+'|'+${Imgs.name}}">
+      <div class="img" id="img">
+      	<img th:each="Imgs : ${recipe_imgs}" class = "img1" th:src="@{'uploads/'+ ${recipe_info.title}+'|'+${Imgs.name}}">
       </div>
       <div class="YouTube" id="YouTubediv">
-
+			<iframe id="YouTube" th:src="${recipe_info.url}" allowfullscreen ></iframe>
       </div>
       <div class="explain">
-        <textarea name="content" id="textarea" rows="8" cols="50">
+        <textarea name="content" id="textarea" rows="8" cols="50" th:text="${recipe_info.exp}">
         </textarea>
       </div>
     </div>
