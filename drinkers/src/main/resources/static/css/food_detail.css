@@ -4,10 +4,11 @@
   width: 4vw;
   height: 4vw;
   border-radius: 50%;
-  background-image: url("image/like.jpg");
+  background-image: url("../image/like.jpg");
   background-color: white;
-  background-position: top;
-  background-size: 3.5vw;
+  background-position: center center;
+  background-size: 2.8vw;
+  background-repeat:no-repeat;
   border: 3px solid  black;
   box-shadow: 0 0 20px rgb(221,221,221);
   float: right;
