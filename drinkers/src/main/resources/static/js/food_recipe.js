@@ -20,45 +20,6 @@ $("#close_modal").click(function () {
 
 
 
-//업로드 폼을 통한 레시피 submit
-//php에 연결하여 데이터를 전송후 폼창을 초기화 하고 보이지 않게 바꾼후 지금 업로드된 레시피 명과 대표사진을 메인페이지에 추가한다
-function add(){
-var form = $("form")[0];
-var formData = new FormData(form);
-$.ajax({
- cache : false,
- url : "upload.php",
- processData: false,
- contentType: false,
- type : 'POST',
- data : formData,
- dataType: 'text',
- success : function(data) {
-   var recipeform =document.getElementById("Recipe");
-   var recipe_name = document.getElementById('recipename').value;
-   var imgInput = document.getElementById("selected_img");
-   document.getElementById('recipename').value="";
-   document.getElementById("upload_vedio").value="";
-   document.getElementById("recipe_textarea").value="";
-   recipeform.style.display='none';
-   var figure = document.createElement('figure');
-   figure.addEventListener("click", move);
-   figure.id= recipe_name;
-   var image = document.createElement('img');
-   image.src = recipe_name+"/"+imgInput.files[0].name;
-   figure.appendChild(image);
-   var figcaption = document.createElement('figcaption');
-   var recipe_name_node = document.createTextNode(recipe_name);
-   figcaption.appendChild(recipe_name_node);
-   figure.appendChild(figcaption);
-   document.getElementById("selected_img").value="";
-   document.getElementById('image').appendChild(figure);
- }, // success
- error : function(xhr, status,data) {
-   alert(xhr + " : " + status);
- }
-});
-}
 
 // recipenames.txt 를 통해서 현재 업로드되어있는 레시피명들을 가지고 오고 그레시피의 대표사진을 가지고와서
 // 메인페이지에 출력한다
