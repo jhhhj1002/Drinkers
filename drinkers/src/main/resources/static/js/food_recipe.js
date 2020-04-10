@@ -21,39 +21,7 @@ $("#close_modal").click(function () {
 
 
 
-// recipenames.txt 를 통해서 현재 업로드되어있는 레시피명들을 가지고 오고 그레시피의 대표사진을 가지고와서
-// 메인페이지에 출력한다
-function readTextFile(file) {
-  var rawFile = new XMLHttpRequest();
-  rawFile.open("GET", file);
-  rawFile.onreadystatechange = function () {
-    if(rawFile.readyState === 4) { if(rawFile.status === 200 || rawFile.status == 0) {
-      var allText = rawFile.responseText;
-      var arrays = allText.toString().split("\n");
-      var count=0;
-      var my  = new Array();
 
-      for(i in arrays) {
-        if(arrays[i]!=""){
-          var mydata = arrays[i].toString().split("|");
-          var figure = document.createElement('figure');
-          figure.addEventListener("click", move);
-          figure.id= mydata[0];
-          var image = document.createElement('img');
-          image.src = mydata[0]+"/"+mydata[1];
-          figure.appendChild(image);
-          var figcaption = document.createElement('figcaption');
-          var recipe_name_node = document.createTextNode(mydata[0]);
-          figcaption.appendChild(recipe_name_node);
-          figure.appendChild(figcaption);
-          document.getElementById('image').appendChild(figure);
-        }
-      }
-    }
-    }
-  };
-  rawFile.send(null);
-}
 
 // 페이지 로드시 recipenames.txt 를 통해서 현재 업로드되어있는 레시피들을 가지고와서 메인페이지에 출력
 $(function(){
