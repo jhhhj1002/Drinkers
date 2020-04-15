@@ -20,15 +20,18 @@
       <input type="button" value="추천순" id="recommend">
       <input type="button" value="upload" id="upload" onclick="upload();">
     </div>
-    <div id="image" th:each="List : ${foodrecipeList}">
-    	<figure th:id="${List.title}" >
-    		<a th:href="@{go_food_recipe_detail(title=${List.title})}">
-    			<img th:src="${'uploads/'+List.title+'|'+List.img}">
-    		</a> 
-    		<figcaption th:text="${List.title}"></figcaption>
-    	</figure>
+    <div id="image">
+	    <th:block th:each="List : ${foodrecipeList}">
+	    	<figure th:id="${List.title}" >
+	    		<a th:href="@{go_food_recipe_detail(title=${List.title})}">
+	    			<img th:src="${'uploads/'+List.title+'|'+List.img}">
+	    		</a> 
+	    		<figcaption th:text="${List.title}"></figcaption>
+	    	</figure>
+	    </th:block> 	
     </div>
   </div>
+  
 
 	<!-- 레시피를 업로드하는 upload form -->
 	<div class="recipe_upload" id="recipe_upload">
