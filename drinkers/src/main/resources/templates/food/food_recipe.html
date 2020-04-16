@@ -16,7 +16,7 @@
   <!-- 메인페이지의 content -->
   <div class="content">
     <div class="button">
-      <input type="button" value="최신순" id="last">
+      <input type="button" value="최신순" onclick="lastest_order();">
       <input type="button" value="추천순" id="recommend">
       <input type="button" value="upload" id="upload" onclick="upload();">
     </div>
@@ -27,8 +27,8 @@
 	    			<img th:src="${'uploads/'+List.title+'|'+List.img}">
 	    		</a> 
 	    		<figcaption th:text="${List.title}"></figcaption>
-	    	</figure>
-	    </th:block> 	
+	    	</figure>     
+	    </th:block>
     </div>
   </div>
   
