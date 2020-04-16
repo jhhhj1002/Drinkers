@@ -5,7 +5,7 @@
   border-style: dashed;
   position: relative;
   z-index: 1;
-}
+} 
 
 div.button input{
   border: 1px solid black;
@@ -28,12 +28,14 @@ div.button #recommend{
   margin-left: -1vw;
 }
 
+/*  아래부분만 완성  */
+
 #image{
   column-width:24vw;
-  column-gap: 1vw;
+  column-gap: 15px;
 }
 
-figure{
+#image figure{
   display: inline-block;
   border:1px solid rgba(0,0,0,0.2);
   margin:0;
@@ -41,21 +43,15 @@ figure{
   padding:10px;
   box-shadow: 2px 2px 5px rgba(0,0,0,0.5);;
 }
-figure img{
+#image figure img{
   width:100%;
 }
-figure figcaption{
+#image figure figcaption{
   border-top:1px solid rgba(0,0,0,0.2);
   padding:10px;
   margin-top:11px;
   text-align: center;
 }
-
-
-
-
-/*  아래부분만 완성  */
-
 
 .recipe_upload{
   border-radius: 10%;
