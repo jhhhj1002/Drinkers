@@ -106,7 +106,7 @@ public class foodController {
 		logger.info("최신순 정렬");
 		
 		List<Map<String, Object>> foodrecipeList = foodservice.selectAllFoodRecipeInfo();
-		
+
 		return foodrecipeList;
 	}
 }
