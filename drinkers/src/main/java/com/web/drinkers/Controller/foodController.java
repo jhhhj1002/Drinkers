@@ -99,4 +99,14 @@ public class foodController {
 		mv.setViewName("food/food_detail");
 		return mv;
 	}
+	
+	@ResponseBody
+	@RequestMapping(value = "/do_lastest_order", method = RequestMethod.GET)
+	public List<Map<String, Object>> doLastestOrder() {
+		logger.info("최신순 정렬");
+		
+		List<Map<String, Object>> foodrecipeList = foodservice.selectAllFoodRecipeInfo();
+		
+		return foodrecipeList;
+	}
 }
