@@ -17,8 +17,8 @@
   <div class="content">
     <div class="button">
       <input type="button" value="최신순" onclick="lastest_order();">
-      <input type="button" value="추천순" id="recommend">
-      <input type="button" value="upload" id="upload" onclick="upload();">
+      <input type="button" class="recommend_btn" value="추천순" onclick="recommended_order();">
+      <input type="button" class="upload_btn" value="upload" onclick="upload();">
     </div>
     <div id="image">
 	    <th:block th:each="List : ${foodrecipeList}">
