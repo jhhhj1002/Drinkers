@@ -1,4 +1,3 @@
-
 // 업로드 버튼 클릭시 업로드 폼창 출력 & 숨김
 function upload(){
 
@@ -16,6 +15,31 @@ $("#close_modal").click(function () {
 	jQuery('#recipe_upload').css("display", "none");
 });
 
+// 최신순 클릭시 ajax 로 그리기 + 추천순도
+function lastest_order() { // th:href 부분수정 !!!!!!!
+
+	$.ajax({
+		url : "do_lastest_order",
+		type : 'GET',
+		success : function(data) {
+			$('#image').empty();
+			
+			$.each(data, function(index, item){				
+				var temp = "<figure id='"+ item.title + "'>"
+							+ "<a href=\"go_food_recipe_detail?title="+ item.title +"\">"
+							+ "<img src=\"uploads/"+ item.title + "|"+ item.img +"\"> </a> "
+							+ "<figcaption>"+ item.title +"</figcaption> </figure>";
+			
+				$('#image').append(temp);
+			});
+			
+		},
+		error : function(xhr, status, data) {
+			alert(xhr + " : " + status);
+		}
+	});
+
+}
 
 
 
@@ -23,10 +47,18 @@ $("#close_modal").click(function () {
 
 
 
-// 페이지 로드시 recipenames.txt 를 통해서 현재 업로드되어있는 레시피들을 가지고와서 메인페이지에 출력
-$(function(){
-    readTextFile("recipenames.txt");
-});
+
+
+
+
+
+
+
+
+//// 페이지 로드시 recipenames.txt 를 통해서 현재 업로드되어있는 레시피들을 가지고와서 메인페이지에 출력
+//$(function(){
+//    readTextFile("recipenames.txt");
+//});
 
 // 최신순 클릭시 정렬
 $("#last").click(function () {
