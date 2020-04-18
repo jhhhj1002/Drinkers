@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="kr" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="alcohol_main.css">
+  </head>
+  <body>
+    <!-- 메뉴바 -->
+    <div class="menubar">
+      <a href="../main/main2.html">Home</a>
+      <a href="../food_recipe/food_recipe_main.html">Food Recipe</a>
+      <a href="alcohol_recipe_main.html">Alcohol Recipe</a>
+      <a href="../ranking/vote_main.html">Ranking</a>
+    </div>
+
+    <!-- 메인페이지의 content -->
+    <div class="content">
+      <div class="button">
+        <input type="button" value="upload" id="upload" onclick="Upload_alcohol()">
+      </div>
+
+      <div id="image">
+
+      </div>
+    </div>
+
+    <!-- upload 하는 폼  -->
+    <div class="Recipe" id="Recipe">
+      <div class="Recipe_content">
+        <form class="recipe_upload_form" id="recipe_upload_form" method="post">
+          <div id="recipe_name">
+            레시피 명칭 :
+            <input type="text" id="recipename" name="recipename" value="" required>
+          </div>
+          <div id="upload_img">
+            image :
+            <input type="file" id="selected_img" name="selected_img[]" value="" multiple required >
+          </div>
+          <div id="Textarea">
+            레시피 설명 :
+            <textarea form="recipe_upload_form" id="recipe_textarea" name="recipe_textarea" required="required"></textarea>
+          </div>
+          <input type="button" id="upload" name="upload" value="Upload" onclick="upload_item()">
+          <input type="button" id="close_modal" name="close_modal" value="close">
+        </form>
+      </div>
+    </div>
+
+    <!-- 레시피 detail 모달창  -->
+    <!-- 레시피 누를때마다 동적으로 정보불러와서 출력 -->
+    <div class="recipe_detail" id="recipe_detail">
+      <div class="Close">
+        <img src="image/remove.png" id="close" onclick="close_detail()" alt="">
+      </div>
+      <div id="title">
+
+      </div>
+      <div id="img1">
+
+      </div>
+      <div id="img2">
+
+      </div>
+      <div class="explain_detail">
+        <textarea name="text" id="textarea" rows="8" cols="55">
+        </textarea>
+      </div>
+    </div>
+
+    <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="alcohol_main.js"></script>
+  </body>
+</html>
