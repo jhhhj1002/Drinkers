@@ -20,11 +20,11 @@ div.button input:hover{
   background-color: #333;
 }
 
-div.button #upload{
+div.button .upload_btn{
   float: right;
 }
 
-div.button #recommend{
+div.button .recommend_btn{
   margin-left: -1vw;
 }
 
