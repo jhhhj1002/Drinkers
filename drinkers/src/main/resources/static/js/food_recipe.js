@@ -15,8 +15,8 @@ $("#close_modal").click(function () {
 	jQuery('#recipe_upload').css("display", "none");
 });
 
-// 최신순 클릭시 ajax 로 그리기 + 추천순도
-function lastest_order() { // th:href 부분수정 !!!!!!!
+// 최신순 클릭시 재정렬
+function lastest_order() {
 
 	$.ajax({
 		url : "do_lastest_order",
@@ -55,16 +55,6 @@ function lastest_order() { // th:href 부분수정 !!!!!!!
 
 
 
-//// 페이지 로드시 recipenames.txt 를 통해서 현재 업로드되어있는 레시피들을 가지고와서 메인페이지에 출력
-//$(function(){
-//    readTextFile("recipenames.txt");
-//});
-
-// 최신순 클릭시 정렬
-$("#last").click(function () {
-  document.getElementById('image').innerHTML="";
-  readTextFile("recipenames.txt");
-});
 
 // recipenames.txt 를 통해서 현재 업로드되어있는 레시피 명들을 가지고 오고 localStorage에 저장된 추천수들을 가져와서
 // 추천순으로 메인페이지에 재정렬한다
