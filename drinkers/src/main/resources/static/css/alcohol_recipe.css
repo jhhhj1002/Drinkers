@@ -1,25 +1,5 @@
 @charset "UTF-8";
 
-
-div.menubar {
-  background-color: #333;
-  overflow: auto;
-  white-space: nowrap;
-  text-align: center;
-}
-
-div.menubar a {
-  display: inline-block;
-  color: white;
-  text-align: center;
-  padding: 14px;
-  text-decoration: none;
-}
-
-div.menubar a:hover {
-  background-color: #777 ;
-}
-
 div.button input{
   border: 1px solid black;
   padding: 8px;
