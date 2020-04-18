@@ -46,9 +46,7 @@ public class foodController {
 		return mv;
 	}
 	
-
 	// food recipe 등록시
-//	@ResponseBody //ajax 쓸지말지 결정
 	@RequestMapping(value = "/do_food_recipe_regist", method = RequestMethod.POST)
 	public String doFoodRecipeUpload(foodVo food, MultipartHttpServletRequest request,HttpSession sessionStorage,
             @RequestParam("imges") MultipartFile[] file ) throws Exception {
@@ -80,7 +78,6 @@ public class foodController {
 		//service 에 전송
 		foodservice.insertfoodrecipe(food, files);	
 		
-		// ResponseBody 쓸 시 리턴값 재설정
 		return "redirect:/go_food_recipe";
 	}
 	
