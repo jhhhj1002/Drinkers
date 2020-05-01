@@ -17,7 +17,7 @@
     <!-- 메인페이지의 content -->
     <div class="content">
       <div class="button">
-        <input type="button" value="upload" id="upload" onclick="Upload_alcohol()">
+        <input type="button" value="upload" id="upload" onclick="upload();">
       </div>
 
       <div id="image">
@@ -26,6 +26,28 @@
     </div>
 
     <!-- upload 하는 폼  -->
+    <div class="recipe_upload" id="recipe_upload">
+      <div class="recipe_upload_content">
+        <form class="recipe_upload_form" id="recipe_upload_form" method="post">
+          <div id="recipe_name">
+            레시피 명칭 :
+            <input type="text" id="recipename" name="recipename" value="" required>
+          </div>
+          <div id="upload_img">
+            image :
+            <input type="file" id="selected_img" name="selected_img[]" value="" multiple required >
+          </div>
+          <div id="Textarea">
+            레시피 설명 :
+            <textarea form="recipe_upload_form" id="recipe_textarea" name="recipe_textarea" required="required"></textarea>
+          </div>
+          <input type="button" id="upload" name="upload" value="Upload" onclick="upload_item()">
+          <input type="button" id="close_modal" name="close_modal" value="close">
+        </form>
+      </div>
+    </div>
+    
+<!--     upload 하는 폼 
     <div class="Recipe" id="Recipe">
       <div class="Recipe_content">
         <form class="recipe_upload_form" id="recipe_upload_form" method="post">
@@ -45,7 +67,9 @@
           <input type="button" id="close_modal" name="close_modal" value="close">
         </form>
       </div>
-    </div>
+    </div> -->
+    
+    
 
     <!-- 레시피 detail 모달창  -->
     <!-- 레시피 누를때마다 동적으로 정보불러와서 출력 -->
@@ -69,6 +93,6 @@
     </div>
 
     <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
-    <script src="alcohol_main.js"></script>
+    <script type="text/javascript" th:src="@{js/alcohol_recipe.js}"></script>
   </body>
 </html>
