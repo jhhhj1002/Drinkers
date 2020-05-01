@@ -1,7 +1,27 @@
-// 업로드 버튼 클릭시 모달창 보이게
-function Upload_alcohol(){
-  document.getElementById("Recipe").style.display="block";
+// 업로드 버튼 클릭시 업로드 폼창 출력 & 숨김
+function upload(){
+
+  if ($("#recipe_upload").css("display") == "none") {
+		jQuery('#recipe_upload').css("display", "block");
+	} else {
+		$("#recipe_upload_form")[0].reset();
+		jQuery('#recipe_upload').css("display", "none");
+	}
 }
+
+
+
+
+
+
+
+
+//// 업로드 버튼 클릭시 모달창 보이게
+//function Upload_alcohol(){
+//  document.getElementById("Recipe").style.display="block";
+//}
+
+
 // close 버튼클릭시 detail모달창 사라지게
 function close_detail(){
   document.getElementById("recipe_detail").style.display="none";
@@ -141,10 +161,10 @@ function readTextFile(file) {
   rawFile.send(null);
 }
 
-// 페이지를 로드할때마다 업로드 했었던 정보 가지고와서 메인페이지에 정렬
-$(function(){
-    readTextFile("alcohol_recipenames.txt");
-});
+//// 페이지를 로드할때마다 업로드 했었던 정보 가지고와서 메인페이지에 정렬
+//$(function(){
+//    readTextFile("alcohol_recipenames.txt");
+//});
 
 // 업로드 폼 창의 close 버튼 클릭시 입력되었던값 모두 초기화 후 안보이게함 
 $("#close_modal").click(function () {
